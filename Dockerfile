@@ -43,12 +43,8 @@ COPY start.sh /start.sh
 RUN chmod 700 /start.sh && chown www-data:www-data /start.sh
 
 # Copy over the www-data cron-tab file.
-RUN set -x && mkdir /crontabs
-COPY crontab /crontabs/www-data
-RUN set -x && chown -R www-data:www-data /crontabs 
-
-# This needs to be at the bottom.         
-USER www-data
+RUN set -x && rm /etc/crontabs/root
+COPY crontab /etc/crontabs/www-data
 
 # Workint directory
 WORKDIR /www   
