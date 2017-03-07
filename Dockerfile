@@ -37,6 +37,7 @@ RUN set -x \
 
 # Copy over default files
 COPY php.ini /etc/php7/php.ini
+RUN set -x && ln -s /usr/bin/php7 /usr/bin/php
 
 # Copy the file that gets called when we start
 COPY start.sh /start.sh
