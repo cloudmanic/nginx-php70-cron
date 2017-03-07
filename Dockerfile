@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-MAINTAINER Spicer Mathtews <spicer@cloudmanic.com>
+MAINTAINER Spicer Matthews <spicer@cloudmanic.com>
 
 ARG P_UID=33
 ARG P_GID=33
